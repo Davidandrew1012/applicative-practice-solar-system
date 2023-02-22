@@ -4,10 +4,10 @@ import { data } from "../data/data";
 // Return an array of Planets' names with gravity less than 10
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetsWithLowGravity(data) {
-  // Your code goes here...
-}
 
+export function getPlanetsWithLowGravity(data)  {
+  return data.planets.filter(planet => planet.gravity < 10).map(planet => planet.name);
+}
 
 
 // === TEST YOURSELF ===
