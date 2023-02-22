@@ -5,7 +5,11 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidNames(data) {
-  // Your code goes here...
+  const asterNames = [];
+  data.asteroids.forEach(asteroid => {
+    asterNames.push(asteroid.name);
+  });
+  return asterNames;
 }
 
 
