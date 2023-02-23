@@ -4,10 +4,24 @@ import { data } from "../data/data";
 // Return the sum of all moons for all planets
 // Return example: 42
 
+
 export function allPlanetsMoonsCount(data) {
-  // Your code goes here...
+  let totalMoons = 0;
+  data.planets.forEach(planet => totalMoons += (planet.moonsCount || 0));
+  return totalMoons;
 }
 
+
+//================== for loop version ========================
+// export function allPlanetsMoonsCount(data) {
+//     let totalMoons = 0;
+//     for (let i = 0; i < data.planets.length; i++) {
+//       if (data.planets[i].moonsCount) {
+//         totalMoons += data.planets[i].moonsCount;
+//       }
+//     }
+//     return totalMoons;
+//   }
 
 
 // === TEST YOURSELF ===

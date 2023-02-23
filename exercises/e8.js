@@ -4,10 +4,20 @@ import { data } from "../data/data";
 // Return a Planet name by a given moon name
 // Return example: 'Planet Name'
 
-export function findPlanetNameByMoon(data, moonName) {
-  // Your code goes here...
+
+export const findPlanetNameByMoon = (data, moonName) => {
+  return data.planets.filter(planet => planet.moons && planet.moons.includes(moonName)).map(planet => planet.name)[0];
 }
 
+
+// ======For Loop========
+// export const findPlanetNameByMoon = (data, moonName) => {
+//   for (let i = 0; i < data.planets.length; i++){
+//     if (data.planets[i].moons && data.planets[i].moons.includes(moonName)) {
+//       return data.planets[i].name;
+//     }
+//   }
+// }
 
 
 // === TEST YOURSELF ===
