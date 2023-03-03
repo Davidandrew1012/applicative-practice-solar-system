@@ -5,12 +5,19 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidNames(data) {
-  const asterNames = [];
-  data.asteroids.forEach(asteroid => {
-    asterNames.push(asteroid.name);
-  });
-  return asterNames;
+  return data.asteroids.map((asteroid) => asteroid.name);
 }
+
+
+
+// Rejected Code:
+// export function getAsteroidNames(data) {
+//   const asterNames = [];
+//   data.asteroids.forEach(asteroid => {
+//     asterNames.push(asteroid.name);
+//   });
+//   return asterNames;
+// }
 
 
 

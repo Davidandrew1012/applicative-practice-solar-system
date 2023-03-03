@@ -6,12 +6,20 @@ import { data } from "../data/data";
 
 
 export function allPlanetsMoonsCount(data) {
-  let totalMoons = 0;
-  data.planets.forEach(planet => totalMoons += (planet.moonsCount || 0));
-  return totalMoons;
-}
+  return data.planets
+    .reduce((totalMoons, planet) => 
+      totalMoons + (planet.moonsCount || 0), 0);
+    }
 
 
+
+//old code:
+// export function allPlanetsMoonsCount(data) {
+//   return data.planets
+//   .reduce((totalMoons, planet) => {
+//      return totalMoons + (planet.moonsCount || 0);
+//   }, 0);
+//  }
 //================== for loop version ========================
 // export function allPlanetsMoonsCount(data) {
 //     let totalMoons = 0;
